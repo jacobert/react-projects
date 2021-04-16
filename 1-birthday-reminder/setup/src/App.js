@@ -3,12 +3,12 @@ import data from "./data";
 import List from "./List";
 
 function App() {
-  const [list, setList] = useState([...data]);
+  const [list, setList] = useState(data);
 
   const handleList = (list) => {
     typeof list !== "undefined" && list.length > 0
       ? setList([])
-      : setList([...data]);
+      : setList(data);
   };
 
   return (
